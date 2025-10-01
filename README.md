@@ -1,6 +1,6 @@
 # fakenews-analysis
 
-## Team Members
+## Team Members 
 
 ## Purpose
 
@@ -24,3 +24,6 @@
 
 https://github.com/KaiDMML/FakeNewsNet/blob/master/README.md
 https://www.kaggle.com/datasets/rahulogoel/isot-fake-news-dataset?resource=download
+
+
+SIDDHARTH JAIN
