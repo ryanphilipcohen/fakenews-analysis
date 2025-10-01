@@ -4,7 +4,21 @@
 
 ## Purpose
 
-## Intallation
+## Installation
+
+### For Developers
+
+1. Clone the repo:
+
+`git clone https://github.com/ryanphilipcohen/fakenews-analysis.git`
+
+2. In the project folder, create a virtual environment:
+
+`conda env create -f environment.yml`
+
+3. Run the virtual environment:
+
+`conda activate capstone-preprocessing`
 
 ## Data Sources and References
 

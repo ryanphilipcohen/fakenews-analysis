@@ -1,0 +1,10 @@
+name: fakenews-analysis
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pandas>=1.5
+  - numpy>=1.25
+  - matplotlib>=3.8
+  - seaborn>=0.13
