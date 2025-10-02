@@ -1,6 +1,6 @@
 # fakenews-analysis
 
-## Team Members 
+## Team Members
 
 ## Purpose
 
@@ -12,18 +12,16 @@
 
 `git clone https://github.com/ryanphilipcohen/fakenews-analysis.git`
 
-2. In the project folder, create a virtual environment:
+2. Create an activate virutal environment:
 
-`conda env create -f environment.yml`
+`python -m venv venv`
+`venv\Scripts\activate`
 
-3. Run the virtual environment:
+3. Install requirements:
 
-`conda activate capstone-preprocessing`
+`pip install -r requirements.txt`
 
 ## Data Sources and References
 
 https://github.com/KaiDMML/FakeNewsNet/blob/master/README.md
 https://www.kaggle.com/datasets/rahulogoel/isot-fake-news-dataset?resource=download
-
-
-SIDDHARTH JAIN
