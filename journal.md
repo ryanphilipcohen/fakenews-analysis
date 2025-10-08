@@ -15,10 +15,18 @@ Questions
 
 ### 10/1/25 - Ryan Cohen
 
-- Wrote a script to scrape articles for the gossicop and politifact websites and attach them to their entries. I believe the proces to be too slow, as it made it through 300 articles in 18 minutes, making the full database of 20000 articles a serious endeavor to get through. We may try this in the future if our data is insufficient. For now, we'll continue with our plan of concatenating articles to their titles if the article is present.
+- Wrote a script to scrape articles for the gossicop and politifact websites and attach them to their entries. I believe the process to be too slow, as it made it through 300 articles in 18 minutes, making the full database of 20000 articles a serious endeavor to get through. We may try this in the future if our data is insufficient. For now, we'll continue with our plan of concatenating articles to their titles if the article is present.
 - Continued work on preprocessing and the typical NLP data cleaning.
 - Experimented more with scraping articles and concurrent fetches to increase efficiency. I'm fairly sure that retrieving about half of those 45k articles can be done in three or four hours, leaving us with only around 22k/78-ish-k that are only titles.
 
 ### 10/6/25 - Ryan Cohen
 
 - Figured out that we have a lot of articles already with full article text along with the title. We're fetching article data from the gossipcop and politifact sources with a sucess rate of about 50%. This will result in a portion of our data having no detail beyond the title. Additionally, there are significantly more real articles that won't have data than false ones. It's possible that our model could create false association with being true and being shorter. We may choose to remove these entirely, and also want to train the model on even amounts of true and false data, so we may truncate the output anyways.
+
+### 10/6/25 - Sid Jain
+
+- Tried pulling the repository and was running into a issue where it wasnt liking one of the imports.
+- Turns out we are both are on different versions Sid-3.11.9 Ryan 3.13.5.
+- Both on same version 3.13.5
+- - Create a tracking variable so that every ~1000 articles it creates a new file so that it doesn't nuke the old one :)
+- Bert Natural Lanaguage Classifier
