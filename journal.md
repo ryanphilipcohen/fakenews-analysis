@@ -29,10 +29,13 @@ Questions
 - Turns out we are both are on different versions Sid-3.11.9 Ryan 3.13.5.
 - Both on same version 3.13.5
 
-### 10/11/25 - Ryan Cohen
+### 10/11/25 - Ryan Cohen and Sid Jain
 
 - Plan for the next week
   - first, we have to finish up the preprocessing. compile all sources into one dataset, text, truth boolean, and source columns (gossipcop/politifact/isot). we want to include the source because we may want to pull equally from all sources, which will require us to have info about which articles are from which sources.
-  - after we have the reduced dataset, we're going to research how to train both the TF-IDF and BERT models, seeing if there's overlap in the way they tokeninze.
+  - after we have the reduced dataset, we're going to research how to train both the TF-IDF and BERT models, seeing if there's overlap in the way they tokenize. (there is not, so we have to tokenize separately)
   - after tokenization research, we'll split the work into TF-IDF training (Ryan) and BERT model training (Sid)
   - For the milestone report, we'd like initial testing done on both models, and even more ideally have some of the reverse engineering done to show the most important words affecting truth. That may have to wait.
+- Preprocessing work
+  - ran into issue where articles reached the csv cell character limit of around 32k. We opted to remove them from the dataset since there weren't many of them causing the problem
+  - reduced the dataset down, ran into potential issue where random sequences from websites (https...) that could interact weirdly with the dataset.
