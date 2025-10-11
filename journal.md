@@ -28,5 +28,11 @@ Questions
 - Tried pulling the repository and was running into a issue where it wasnt liking one of the imports.
 - Turns out we are both are on different versions Sid-3.11.9 Ryan 3.13.5.
 - Both on same version 3.13.5
-- - Create a tracking variable so that every ~1000 articles it creates a new file so that it doesn't nuke the old one :)
-- Bert Natural Lanaguage Classifier
+
+### 10/11/25 - Ryan Cohen
+
+- Plan for the next week
+  - first, we have to finish up the preprocessing. compile all sources into one dataset, text, truth boolean, and source columns (gossipcop/politifact/isot). we want to include the source because we may want to pull equally from all sources, which will require us to have info about which articles are from which sources.
+  - after we have the reduced dataset, we're going to research how to train both the TF-IDF and BERT models, seeing if there's overlap in the way they tokeninze.
+  - after tokenization research, we'll split the work into TF-IDF training (Ryan) and BERT model training (Sid)
+  - For the milestone report, we'd like initial testing done on both models, and even more ideally have some of the reverse engineering done to show the most important words affecting truth. That may have to wait.
