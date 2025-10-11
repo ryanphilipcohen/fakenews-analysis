@@ -39,3 +39,4 @@ Questions
 - Preprocessing work
   - ran into issue where articles reached the csv cell character limit of around 32k. We opted to remove them from the dataset since there weren't many of them causing the problem
   - reduced the dataset down, ran into potential issue where random sequences from websites (https...) that could interact weirdly with the dataset.
+  - ran into max file size limit for github, so we're not including those specific processed files in our pushes. We'll just run the same code to locally store it and gitignore those to prevent issues.
