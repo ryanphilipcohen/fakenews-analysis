@@ -70,3 +70,20 @@ Average Loss: 0.2891
 ### 10/16/25 - Ryan Cohen
 
 Made quick updates to the gitignore to avoid uploading files exceeding github's upload limit
+
+### 10/19/25 - Ryan Cohen
+
+Work
+
+- Designed the TF-IDF model tokenization and linear regression training loop
+- Began comparing configurations of the model by comparing output like precision and accuracy of different input, like a maximum word count per article and testing the ability of a model trained on one dataset to predict the authenticity of another dataset's article.
+- Designed output to display the "explanation" of the truth result based on each word and it's truth vector
+
+Thoughts
+
+- From my preliminary results, using a relatively straightforward TF-IDF model trained on every source and without word limit (the combination that led to solid metrics), it's clear that things like proper nouns have a heavy impact on the outcome. The best example is that names like Joe Biden or Donald Trump are labeled as extremely likely to be false, and those contributions weigh more heavily than other words do. It's possible that removing names could be a path forward.
+
+To-do
+
+- I'll run some tests to see what words out of the whole dataset have the heaviest magnitudes in both directions.
+- I'll have to do some research on how other people have dealt with this issue generally.
