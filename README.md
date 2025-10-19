@@ -2,9 +2,9 @@
 
 ## Team Members
 
-Ryan Cohen — ryancohen@vt.edu
+Ryan Cohen - ryancohen@vt.edu
 
-Siddharth Jain — siddharthjain@vt.edu
+Siddharth Jain - siddharthjain@vt.edu
 
 ## Purpose
 
