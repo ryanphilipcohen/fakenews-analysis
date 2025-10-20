@@ -44,24 +44,46 @@ Questions
 ### 10/15/2025 - Sid Jain
 
 - Successfully implemented BERT fake news classification model
-Data Manipulation:
+  Data Manipulation:
 - Added dataset size selector feature with simple variable (DATASET_SIZE = 300) to control the amount of time needed to train model
   - Created balanced sampling to ensure equal representation of fake and real news articles (150 fake + 150 real) instead of training on imbalanced data
   - Discovered during testing that initial sampling resulted in all 300 samples being truth news so made sure that for whatever number of articles there was a equal split.
 - Initially faced 31+ hour training estimates due to GPU memory buffer. Switched to CPU training which reduced training time to ~5 minutes for 300 samples while maintaining stability
 
 Initial Run 300 samples
+
 - Training completed successfully in approximately 5 minutes on CPU
 - Loss progression showed good learning: started at 0.7060 (epoch 1), improved to 0.6775 (epoch 2), and ended at 0.5101 (epoch 3)
 - Model showed learning capability with 28% loss reduction over 3 epochs
 
 Run after 1000 saples
 Epoch 1 of 3
- 33%|███▎      | 100/300 [03:14<06:22,  1.91s/it]
+33%|███▎ | 100/300 [03:14<06:22, 1.91s/it]
 Average Loss: 0.6553
 Epoch 2 of 3
- 67%|██████▋   | 200/300 [06:29<03:15,  1.95s/it]
+67%|██████▋ | 200/300 [06:29<03:15, 1.95s/it]
 Average Loss: 0.4866
 Epoch 3 of 3
-100%|██████████| 300/300 [09:45<00:00,  1.92s/it]
+100%|██████████| 300/300 [09:45<00:00, 1.92s/it]
 Average Loss: 0.2891
+
+### 10/16/25 - Ryan Cohen
+
+Made quick updates to the gitignore to avoid uploading files exceeding github's upload limit
+
+### 10/19/25 - Ryan Cohen
+
+Work
+
+- Designed the TF-IDF model tokenization and linear regression training loop
+- Began comparing configurations of the model by comparing output like precision and accuracy of different input, like a maximum word count per article and testing the ability of a model trained on one dataset to predict the authenticity of another dataset's article.
+- Designed output to display the "explanation" of the truth result based on each word and it's truth vector
+
+Thoughts
+
+- From my preliminary results, using a relatively straightforward TF-IDF model trained on every source and without word limit (the combination that led to solid metrics), it's clear that things like proper nouns have a heavy impact on the outcome. The best example is that names like Joe Biden or Donald Trump are labeled as extremely likely to be false, and those contributions weigh more heavily than other words do. It's possible that removing names could be a path forward.
+
+To-do
+
+- I'll run some tests to see what words out of the whole dataset have the heaviest magnitudes in both directions.
+- I'll have to do some research on how other people have dealt with this issue generally.
