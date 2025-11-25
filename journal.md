@@ -56,7 +56,7 @@ Initial Run 300 samples
 - Loss progression showed good learning: started at 0.7060 (epoch 1), improved to 0.6775 (epoch 2), and ended at 0.5101 (epoch 3)
 - Model showed learning capability with 28% loss reduction over 3 epochs
 
-Run after 1000 saples
+Run after 1000 samples
 Epoch 1 of 3
 33%|███▎ | 100/300 [03:14<06:22, 1.91s/it]
 Average Loss: 0.6553
