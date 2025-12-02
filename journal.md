@@ -87,3 +87,29 @@ To-do
 
 - I'll run some tests to see what words out of the whole dataset have the heaviest magnitudes in both directions.
 - I'll have to do some research on how other people have dealt with this issue generally.
+
+### 11/19/25 - Siddharth Jain 
+
+Work - Interpretability Analysis (Notebook 04)
+
+- Completed BERT model interpretability analysis using LIME 
+- Created detailed visualization
+  - Individual bar charts for each prediction showing top 12 LIME features
+  - Color-coded features (green for REAL support, red for FAKE support)
+  - Article text highlighting to show which words drove predictions
+  - Comparison table showing all 6 examples with prediction accuracy and feature breakdown
+- Analyzed 6 sample articles (3 fake, 3 real) with detailed feature importance weights
+- Results: 83.33% accuracy on sample (5/6 correct predictions)
+
+Key Findings from LIME Analysis
+
+- Top positive indicator for REAL: "degeneres" (+0.3453 weight)
+- Top negative indicator for FAKE: "dorota" (+0.0002 weight)
+- Total of 58 unique features analyzed across all explanations
+- 38 features support REAL predictions, 20 support FAKE predictions
+- Notable patterns: Celebrity names (ariana, ellen, grande) heavily influence REAL classification
+- Sensationalized language (terrorist, singer) tends toward FAKE classification
+
+Observations
+
+- Similar to TF-IDF results, proper nouns (celebrity names) dominate feature importance
