@@ -88,28 +88,33 @@ To-do
 - I'll run some tests to see what words out of the whole dataset have the heaviest magnitudes in both directions.
 - I'll have to do some research on how other people have dealt with this issue generally.
 
-### 11/19/25 - Siddharth Jain 
+12/03/2025 - Siddharth Jain
 
-Work - Interpretability Analysis (Notebook 04)
 
-- Completed BERT model interpretability analysis using LIME 
-- Created detailed visualization
-  - Individual bar charts for each prediction showing top 12 LIME features
-  - Color-coded features (green for REAL support, red for FAKE support)
-  - Article text highlighting to show which words drove predictions
-  - Comparison table showing all 6 examples with prediction accuracy and feature breakdown
-- Analyzed 6 sample articles (3 fake, 3 real) with detailed feature importance weights
-- Results: 83.33% accuracy on sample (5/6 correct predictions)
+Question: Does changing the BERT model to only include one type of subject effect its results (gossipy vs strictly political articles)
+  -> do we get rid of one of the article types as a proccess
+  -> should we strictly focus on political articles???
 
-Key Findings from LIME Analysis
+Question: Check if the length of the article is having a effect on the prediction model
 
-- Top positive indicator for REAL: "degeneres" (+0.3453 weight)
-- Top negative indicator for FAKE: "dorota" (+0.0002 weight)
-- Total of 58 unique features analyzed across all explanations
-- 38 features support REAL predictions, 20 support FAKE predictions
-- Notable patterns: Celebrity names (ariana, ellen, grande) heavily influence REAL classification
-- Sensationalized language (terrorist, singer) tends toward FAKE classification
+Task:
+- Start by researching if keeping the subject affect the 
 
-Observations
+Subject breakdown:
+    Political - Fake: 68.0%, Real: 92.0%
+    Gossip   - Fake: 32.0%, Real: 100.0% 
 
-- Similar to TF-IDF results, proper nouns (celebrity names) dominate feature importance
+here is somthing interesting to take a look at the model had a much better tiem with politifact then it did gossipcop (go figure) but also it had a terrible time with the fake articles because it only got them right 32% of the time compared to guessing all the REAL ones 100% of the time 
+
+we arent losing much with length and entity masking
+TEST 4: Entity Generalization
+  Original accuracy: 73.0%
+  Masked entities:   73.0%
+  Drop: 0.0%
+
+TEST 2: Sensational Words Dependency
+  Original accuracy:         73.0%
+  Without sensational words: 77.5%
+  Drop: -4.5%
+
+So at least the models are doing well here. For test two I told CHAT to go through the articles that I gave and go through and basically remove all the esnsational  words and see how the percentage changed and it to be better so we can also use that its accuracy overall went up
