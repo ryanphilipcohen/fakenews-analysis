@@ -1,0 +1,2 @@
+timestamp,source_filter,sample_size,max_features,ngram_range,test_size,random_state,model_type,model_params,Accuracy,Precision,Recall,F1,ROC_AUC
+2025-10-21 18:36:58,,9999999,20000,"(1, 2)",0.2,42,LogisticRegression,{'max_iter': 200},0.9518844543201436,0.9458511287370348,0.9675456389452333,0.9565753952950251,0.9892381060882944
