@@ -117,4 +117,26 @@ TEST 2: Sensational Words Dependency
   Without sensational words: 77.5%
   Drop: -4.5%
 
-So at least the models are doing well here. For test two I told CHAT to go through the articles that I gave and go through and basically remove all the esnsational  words and see how the percentage changed and it to be better so we can also use that its accuracy overall went up
+So at least the models are doing well here. For test two I told CHAT to go through the articles that I gave and go through and basically remove all the sensational  words and see how the percentage changed and it to be better so we can also use that its accuracy overall went up
+
+
+12/3/2025- Siddharth Jain 
+
+=== COMPREHENSIVE METRICS ===
+Accuracy:  0.8271
+Precision: 0.8223
+Recall:    0.8271
+F1-Score:  0.8233
+ROC-AUC:   0.8649
+
+=== DETAILED CLASSIFICATION REPORT ===
+              precision    recall  f1-score   support
+
+   Fake News       0.73      0.64      0.68       548
+   Real News       0.86      0.91      0.88      1332
+
+    accuracy                           0.83      1880
+   macro avg       0.80      0.77      0.78      1880
+weighted avg       0.82      0.83      0.82      1880
+
+The data is not evenly spit its like 70% 30% will try again after making the data even
