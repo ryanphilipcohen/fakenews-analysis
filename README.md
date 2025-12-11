@@ -2,7 +2,7 @@
 
 A comprehensive machine learning project for detecting fake news with interpretable explanations using LIME (Local Interpretable Model-agnostic Explanations). This project compares TF–IDF + Logistic Regression and BERT-based transformer models for both accuracy and explainability.
 
-## Reposity Link
+## Repository Link
 https://github.com/ryanphilipcohen/fakenews-analysis/
 
 ## Team Members
@@ -82,7 +82,7 @@ fakenews-analysis/
 │       │   ├── politifact_sample_real.csv     
 │       │   ├── politifact_test.csv           
 │       │   └── politifact_train.csv           
-│       └── 01/                       
+│       └── 01/                                 # Need to run preprossesing to see these files     
 │           ├── Fake_VS_Real_cleaned.csv       
 │           ├── human_readable_dataset.csv     
 │           └── reduced_dataset.csv           
