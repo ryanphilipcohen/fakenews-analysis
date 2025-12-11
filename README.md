@@ -83,7 +83,7 @@ fakenews-analysis/
 │           ├── Fake_VS_Real_cleaned.csv       
 │           ├── human_readable_dataset.csv     
 │           └── reduced_dataset.csv           
-├── models/                            
+├── models/                             # These models do not appear in the repository, run BERT model training to get those models                       
 │   ├── bert_fake_news_trained_v2/    
 │   ├── bert_politifact_retrained/    
 │   └── bert_gossip/                 
