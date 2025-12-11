@@ -15,7 +15,7 @@ This project develops a machine learning system to detect fake news and explain 
 
 ### Models Included
 
-1. **TF–IDF + Logistic Regression (Combined)**: General purpose baseline model
+1. **TF–IDF**: General purpose baseline model
 2. **BERT Combined Specialist** (`bert_fake_news_trained_v2`): Multi-domain fake news detection
 3. **BERT Political Specialist** (`bert_politifact_retrained`): Optimized for political news (PolitiFact dataset)
 4. **BERT Gossip Specialist** (`bert_gossip`): Optimized for gossip/celebrity news
