@@ -2,6 +2,9 @@
 
 A comprehensive machine learning project for detecting fake news with interpretable explanations using LIME (Local Interpretable Model-agnostic Explanations). This project compares TF–IDF + Logistic Regression and BERT-based transformer models for both accuracy and explainability.
 
+## Reposity Link
+https://github.com/ryanphilipcohen/fakenews-analysis/
+
 ## Team Members
 
 - Ryan Cohen (ryancohen@vt.edu)
